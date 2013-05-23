@@ -4,6 +4,16 @@ ruby_pkg
 [![Build Status](https://travis-ci.org/reaktor/chef-ruby_pkg.png?branch=master)](https://travis-ci.org/reaktor/chef-ruby_pkg)
 [![Dependency Status](https://gemnasium.com/reaktor/chef-ruby_pkg.png)](https://gemnasium.com/reaktor/chef-ruby_pkg)
 
+Table of Contents
+-----------------
+
+* [Description](#description)
+* [Requirements](#requirements)
+* [Usage](#usage)
+    * [knife-solo](#knife-solo)
+    * [Vagrant](#vagrant)
+* [License and Author](#license-and-author)
+
 Description
 -----------
 
