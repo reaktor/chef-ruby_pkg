@@ -104,3 +104,7 @@ pkg/*
 # Travis #
 ##########
 .travis.yml
+
+# knife-solo #
+##############
+nodes/*
