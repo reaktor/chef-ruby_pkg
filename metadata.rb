@@ -3,7 +3,7 @@ maintainer       'Reaktor Innovations Oy'
 maintainer_email 'cookbooks@reaktor.fi'
 license          'Apache v2.0'
 description      'Builds a ruby package using ruby_build and fpm'
-version          '0.1.0'
+version          '0.1.1'
 
 supports         'debian'
 supports         'ubuntu'
