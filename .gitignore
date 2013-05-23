@@ -2,4 +2,5 @@
 /.vagrant
 /Berksfile.lock
 /Gemfile.lock
+/nodes/
 /pkg
