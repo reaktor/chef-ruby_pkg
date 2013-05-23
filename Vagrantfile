@@ -23,7 +23,7 @@ Vagrant.configure('2') do |config|
     chef.add_recipe 'ruby_pkg::fpm_dependencies'
   end
 
-  # Build and package the specified Ruby package
+  # Build and package the specified Ruby version
   config.vm.provision :chef_solo do |chef|
     chef.log_level = :debug if ENV['DEBUG']
 
@@ -32,7 +32,7 @@ Vagrant.configure('2') do |config|
       :ruby_pkg => {
         :pkg_dir      => '/vagrant/pkg',
         :ruby_version => ENV['VERSION'],
-        :interation   => ENV['ITERATION'],
+        :iteration    => ENV['ITERATION'],
         :maintainer   => ENV['MAINTAINER']
       }
     }
