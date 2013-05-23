@@ -2,6 +2,7 @@ ruby_pkg
 ========
 
 [![Build Status](https://travis-ci.org/reaktor/chef-ruby_pkg.png?branch=master)](https://travis-ci.org/reaktor/chef-ruby_pkg)
+[![Dependency Status](https://gemnasium.com/reaktor/chef-ruby_pkg.png)](https://gemnasium.com/reaktor/chef-ruby_pkg)
 
 Description
 -----------
@@ -22,8 +23,8 @@ This cookbook is intended to be used with the included Vagrant setup (although y
 
 To use Vagrant you need to clone the repository from Github:
 
-        $ git clone https://github.com/reaktor/chef-ruby_pkg.git
-        $ cd chef-ruby_pkg
+        $ git clone https://github.com/reaktor/chef-ruby_pkg.git ruby_pkg
+        $ cd ruby_pkg
 
 ### Install Vagrant environment
 
