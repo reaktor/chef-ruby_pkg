@@ -43,7 +43,7 @@ To use knife-solo or Vagrant you need to use the full [source repository](https:
 1. Install Ruby (1.9.3 or later) and [Bundler](http://gembundler.com/)
 2. Install knife-solo and dependencies:
 
-        $ bundle install
+        $ bundle install --without development:test
 
 #### Building with knife-solo
 
