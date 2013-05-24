@@ -22,16 +22,16 @@ A Chef cookbook with [knife-solo](http://matschaffer.github.io/knife-solo/) and 
 Requirements
 ------------
 
-Requires [ruby_build](http://community.opscode.com/cookbooks/ruby_build) and [fpm-tng](http://community.opscode.com/cookbooks/fpm-tng) community cookbooks.
-
 Should work on all Debian based Linux distributions. Support for some other platforms (that ruby_build and [fpm](https://github.com/jordansissel/fpm) support) is planned. Please open an [issue](https://github.com/reaktor/chef-ruby_pkg/issues) or pull request if interested.
+
+Requires [ruby_build](http://community.opscode.com/cookbooks/ruby_build) and [fpm-tng](http://community.opscode.com/cookbooks/fpm-tng) community cookbooks.
 
 Usage
 -----
 
 This cookbook is intended to be used with the included knife-solo or Vagrant setup (although you *can* use the cookbook directly by adding it to run_list or by including it in your own cookbooks).
 
-To use knife-solo or Vagrant you need to clone the repository from Github:
+To use knife-solo or Vagrant you need to use the full [source repository](https://github.com/reaktor/chef-ruby_pkg) version. You can download and extract a [tarball release](https://github.com/reaktor/chef-ruby_pkg/tags) or clone the git repository:
 
         $ git clone https://github.com/reaktor/chef-ruby_pkg.git ruby_pkg
         $ cd ruby_pkg
