@@ -11,8 +11,5 @@ end
 
 group :knife_solo do
   gem 'berkshelf', '~> 1.4'
-  gem 'knife-solo',
-    github: 'tmatilai/knife-solo',
-    branch: 'edge',
-    submodules: true
+  gem 'knife-solo', '~> 0.3.0.pre4'
 end
