@@ -7,6 +7,7 @@
     - We can use the community site version of fpm-tng cookbook
 - Remove apt cookbook dependency from the cookbook
     - Add apt recipe to the run_list in Vagrantfile and example.json
+- Add Test Kitchen setup ([GH-3])
 
 # 0.1.0 / 2013-05-22
 
@@ -16,3 +17,4 @@
 
 [GH-1]:  https://github.com/reaktor/chef-ruby_pkg/issues/1  "Issue 1"
 [GH-2]:  https://github.com/reaktor/chef-ruby_pkg/issues/2  "Issue 2"
+[GH-3]:  https://github.com/reaktor/chef-ruby_pkg/issues/3  "Issue 3"

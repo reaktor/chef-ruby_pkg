@@ -1,0 +1,31 @@
+---
+driver_plugin: vagrant
+driver_config:
+  customize:
+    memory: 1024
+  require_chef_omnibus: true
+
+platforms:
+- name: debian-7.0
+  driver_config:
+    box: debian-7.0
+    box_url: https://reaktor-vm.s3.amazonaws.com/vagrant/debian-7.0.0_chef-11.4.4.box
+  run_list: recipe[apt]
+
+- name: debian-6.0
+  driver_config:
+    box: debian-6.0
+    box_url: https://reaktor-vm.s3.amazonaws.com/vagrant/debian-6.0.7_chef-11.4.4.box
+  run_list: recipe[apt]
+
+- name: ubuntu-12.04
+  driver_config:
+    box: ubuntu-12.04
+    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_provisionerless.box
+  run_list: recipe[apt]
+
+suites:
+- name: default
+  run_list:
+  - recipe[ruby_pkg]
+  attributes: { ruby_pkg: { ruby_version: '1.9.3-p429' } }
