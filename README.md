@@ -48,21 +48,21 @@ To use knife-solo or Vagrant you need to use the full [source repository](https:
 #### Building with knife-solo
 
 1. Copy _./nodes/example.json_ to for example _./nodes/myruby.json_ and edit it to match your wishes
-2. Prepare the server. Installs Chef and other knife-solo requirements, plus system Ruby packages that are needed for fpm.
+2. Bootstrap the server. Installs Chef and other knife-solo requirements and then builds and packages the specified Ruby version:
 
-        $ bundle exec knife solo bootstrap <user@host> nodes/prepare.json
+        $ bundle exec knife solo bootstrap <user@host> nodes/myruby.json
 
     You can also use [knife-ec2](https://github.com/opscode/knife-ec2), [knife-digital_ocean](https://github.com/rmoriz/knife-digital_ocean), etc. For example:
 
         $ gem install knife-ec2
-        $ knife ec2 server create --node-name=prepare <other_ec2_options>...
+        $ knife ec2 server create --node-name=myruby <other_ec2_options>...
         # note the FQDN/IP for next phase
 
-3. Build and package the Ruby:
+    If the server is already prepared, you can run only the converge phase:
 
         $ bundle exec knife solo cook <user@host> nodes/myruby.json
 
-4. Fetch the package from the server. For example:
+3. Fetch the package from the server. For example:
 
         $ scp <user@host>:/tmp/debian-7.0_ruby-1.9.3-p429-1_amd64.deb pkg/
 

@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: ruby_pkg
-# Recipe:: _fpm_dependencies
+# Recipe:: _fpm_gemhome
 #
 # Author:: Teemu Matilainen <teemu.matilainen@reaktor.fi>
 #
@@ -19,23 +19,25 @@
 # limitations under the License.
 #
 
-node.default['ruby_pkg']['fpm_dependencies'] = Chef::RubyPkg::Helpers.default_fpm_dependencies(node)
-dependencies = node['ruby_pkg']['fpm_dependencies']
+fpm_gemhome = node['ruby_pkg']['fpm_gemhome']
 
-if !dependencies || dependencies.empty?
-  Chef::Log.info 'No fpm dependencies specified'
-  return
+directory fpm_gemhome do
+  owner 'root'
+  group 'root'
+  mode 00755
+  recursive true
 end
 
-# Reload Ohai's ruby information
-ohai 'ruby' do
-  plugin 'ruby'
-  action :nothing
-end
-
-# Install system ruby etc.
-dependencies.each do |pkg|
-  package pkg do
-    notifies :reload, 'ohai[ruby]', :immediately
+ruby_block 'Set GEM_HOME for fpm' do
+  block do
+    ENV['GEM_HOME'] = fpm_gemhome
   end
+  notifies :create, 'ruby_block[Unset GEM_HOME]'
+end
+
+ruby_block 'Unset GEM_HOME' do
+  block do
+    ENV['GEM_HOME'] = nil
+  end
+  action :nothing
 end

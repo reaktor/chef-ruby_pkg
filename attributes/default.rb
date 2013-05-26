@@ -23,10 +23,10 @@ default['ruby_pkg']['ruby_version']     = '1.9.3-p429'
 default['ruby_pkg']['iteration']        = 1
 
 default['ruby_pkg']['pkg_dir']          = '/tmp'
+default['ruby_pkg']['fpm_gemhome']      = '/usr/local/fpm_gems'
 
 default['ruby_pkg']['maintainer']       = nil
 
 # Real defaults set in the recipes
 default['ruby_pkg']['type']             = nil
 default['ruby_pkg']['dependencies']     = nil
-default['ruby_pkg']['fpm_dependencies'] = nil
