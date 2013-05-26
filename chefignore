@@ -60,7 +60,9 @@ test/*
 features/*
 Guardfile
 Procfile
+.kitchen/*
 .kitchen.yml
+.kitchen.local.yml
 vendor/*
 
 # SCM #

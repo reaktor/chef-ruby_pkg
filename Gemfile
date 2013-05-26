@@ -15,4 +15,6 @@ end
 
 group :development do
   gem 'guard-foodcritic', '>= 1.0.1'
+  gem 'kitchen-vagrant', '>= 0.10.0'
+  gem 'test-kitchen', '>= 1.0.0.alpha.7'
 end
