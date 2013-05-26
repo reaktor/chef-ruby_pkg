@@ -1,6 +1,8 @@
 # 0.1.1 / _Not released yet_
 
 - Add configuration and instructions for [knife-solo](http://matschaffer.github.io/knife-solo/) ([GH-1])
+- Remove apt cookbook dependency from the cookbook
+    - Add apt recipe to the run_list in Vagrantfile and example.json
 
 # 0.1.0 / 2013-05-22
 

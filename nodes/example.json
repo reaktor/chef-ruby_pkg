@@ -4,6 +4,7 @@
     "maintainer": "Someone <foo@example.com>"
   },
   "run_list": [
+    "recipe[apt]",
     "recipe[ruby_pkg]"
   ]
 }

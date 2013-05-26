@@ -8,6 +8,5 @@ version          '0.1.1'
 supports         'debian'
 supports         'ubuntu'
 
-depends          'apt'
 depends          'fpm-tng', '~> 0.1.6'
 depends          'ruby_build', '~> 0.6'

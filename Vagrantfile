@@ -1,5 +1,11 @@
+BOX = ENV.fetch('BOX', 'debian-6.0')
+
+def debianoid?
+  BOX =~ /debian|ubuntu/
+end
+
 Vagrant.configure('2') do |config|
-  config.vm.box = ENV.fetch('BOX', 'debian-6.0')
+  config.vm.box = BOX
   config.vm.hostname = 'ruby-pkg'
 
   config.vm.provider :virtualbox do |v|
@@ -20,6 +26,7 @@ Vagrant.configure('2') do |config|
   config.vm.provision :chef_solo do |chef|
     chef.log_level = :debug if ENV['DEBUG']
 
+    chef.add_recipe 'apt' if debianoid?
     chef.add_recipe 'ruby_pkg::fpm_dependencies'
   end
 

@@ -27,11 +27,6 @@ if !dependencies || dependencies.empty?
   return
 end
 
-# Ensure package cache is up-to-date
-if node['platform_family'] == 'debian'
-  include_recipe 'apt'
-end
-
 # Reload Ohai's ruby information
 ohai 'ruby' do
   plugin 'ruby'
