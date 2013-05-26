@@ -41,6 +41,7 @@ class Chef
         when 'debian' then 'deb'
         else
           Chef::Log.warn 'Unsupported platform for ruby_pkg'
+          nil
         end
       end
 
