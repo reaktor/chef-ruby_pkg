@@ -1,4 +1,4 @@
-# 0.1.1 / _Not released yet_
+# 0.2.0 / 2013-05-26
 
 - Add configuration and instructions for [knife-solo](http://matschaffer.github.io/knife-solo/) ([GH-1])
 - Use the freshly built ruby for installing and running fpm ([GH-2])
