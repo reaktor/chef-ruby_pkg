@@ -1,5 +1,0 @@
-{
-  "run_list": [
-    "recipe[ruby_pkg::fpm_dependencies]"
-  ]
-}
