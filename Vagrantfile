@@ -21,18 +21,10 @@ Vagrant.configure('2') do |config|
   config.berkshelf.enabled = true
   config.omnibus.chef_version = :latest
 
-  # Install Ruby and other fpm dependencies in a separate run
-  # to ensure that Ohai data is accurate
   config.vm.provision :chef_solo do |chef|
     chef.log_level = :debug if ENV['DEBUG']
 
     chef.add_recipe 'apt' if debianoid?
-    chef.add_recipe 'ruby_pkg::fpm_dependencies'
-  end
-
-  # Build and package the specified Ruby version
-  config.vm.provision :chef_solo do |chef|
-    chef.log_level = :debug if ENV['DEBUG']
 
     chef.add_recipe 'ruby_pkg'
     chef.json = {
