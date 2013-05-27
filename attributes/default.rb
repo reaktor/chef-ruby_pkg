@@ -22,6 +22,7 @@
 default['ruby_pkg']['ruby_version']     = '1.9.3-p429'
 default['ruby_pkg']['iteration']        = 1
 
+default['ruby_pkg']['base_dir']         = '/usr/local/ruby'
 default['ruby_pkg']['pkg_dir']          = '/tmp'
 default['ruby_pkg']['fpm_gemhome']      = '/usr/local/fpm_gems'
 

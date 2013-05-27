@@ -29,18 +29,18 @@ end
 
 include_recipe 'ruby_pkg::_fpm_gemhome'
 
-ruby_base_path = node['ruby_build']['default_ruby_base_path']
+ruby_base_dir = node['ruby_pkg']['base_dir']
 ruby_version_full = node['ruby_pkg']['ruby_version']
 ruby_version_main = Chef::RubyPkg::Helpers.main_version(ruby_version_full)
 
 # Configure and include fpm-tng recipe
 node.set['fpm_tng']['exec'] = File.join(node['ruby_pkg']['fpm_gemhome'], 'bin', 'fpm')
-node.set['fpm_tng']['gem'] = File.join(ruby_base_path, ruby_version_full, 'bin', 'gem')
-node.default['fpm_tng']['package_dir'] = node['ruby_pkg']['pkg_dir']
+node.set['fpm_tng']['gem'] = File.join(ruby_base_dir, ruby_version_full, 'bin', 'gem')
+node.set['fpm_tng']['package_dir'] = node['ruby_pkg']['pkg_dir']
 include_recipe 'fpm-tng'
 
 # Synlink e.g. /usr/local/ruby/1.9.3 -> 1.9.3-p429
-link File.join(ruby_base_path, ruby_version_main) do
+link File.join(ruby_base_dir, ruby_version_main) do
   to ruby_version_full
 end
 
@@ -51,7 +51,7 @@ ruby_package_path = File.join(
 # Build the package
 fpm_tng_package "ruby-#{ruby_version_main}" do
   input_type   'dir'
-  input_args   [ruby_version_full, ruby_version_main].map { |dir| File.join(ruby_base_path, dir) }
+  input_args   [ruby_version_full, ruby_version_main].map { |dir| File.join(ruby_base_dir, dir) }
   output_type  node['ruby_pkg']['type']
   package      ruby_package_path
   version      ruby_version_full

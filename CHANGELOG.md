@@ -1,5 +1,6 @@
 # 0.2.1 / _Not released yet_
 
+- Add `base_dir` attribute instead of using `node['ruby_build']['default_ruby_base_path']`
 - Fix skipping of "package" recipe on unknown platform
 - Remove deb dependency on libc6 as it is a required package
 

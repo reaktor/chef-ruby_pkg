@@ -20,4 +20,8 @@
 #
 
 include_recipe 'ruby_build'
-ruby_build_ruby node['ruby_pkg']['ruby_version']
+
+ruby_version = node['ruby_pkg']['ruby_version']
+ruby_build_ruby ruby_version do
+  prefix_path File.join(node['ruby_pkg']['base_dir'], ruby_version)
+end
