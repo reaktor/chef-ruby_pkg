@@ -12,6 +12,8 @@ Table of Contents
 * [Usage](#usage)
     * [knife-solo](#knife-solo)
     * [Vagrant](#vagrant)
+* [Recipes](#recipes)
+* [Attributes](#attributes)
 * [License and Author](#license-and-author)
 
 Description
@@ -29,7 +31,7 @@ Requires [ruby_build](http://community.opscode.com/cookbooks/ruby_build) and [fp
 Usage
 -----
 
-This cookbook is intended to be used with the included knife-solo or Vagrant setup (although you *can* use the cookbook directly by adding it to run_list or by including it in your own cookbooks).
+The easiest way to build the Ruby package is by using the included knife-solo or Vagrant setup. You can of course use the cookbook also directly by adding it to run_list or by including it in your own cookbooks.
 
 To use knife-solo or Vagrant you need to use the full [source repository](https://github.com/reaktor/chef-ruby_pkg) version. You can download and extract a [tarball release](https://github.com/reaktor/chef-ruby_pkg/tags) or clone the git repository:
 
@@ -47,7 +49,7 @@ To use knife-solo or Vagrant you need to use the full [source repository](https:
 
 #### Building with knife-solo
 
-1. Copy _./nodes/example.json_ to for example _./nodes/myruby.json_ and edit it to match your wishes
+1. Copy _./nodes/example.json_ to for example _./nodes/myruby.json_ and edit it to match your wishes. See [Attributes](#attributes) for possible options.
 2. Bootstrap the server. Installs Chef and other knife-solo requirements and then builds and packages the specified Ruby version:
 
         $ bundle exec knife solo bootstrap <user@host> nodes/myruby.json
@@ -97,6 +99,22 @@ The package will be created to _pkg_ directory.
   * `$ITERATION` - The package iteration version number. Passed to fpm.
     Defaults to 1.
   * `$MAINTAINER` - The (optional) package maintainer. Passed to fpm.
+
+Recipes
+-------
+
+  * `default` - Includes other recipes to build and package the specified Ruby version.
+  * `build` - Builds the specified Ruby version.
+  * `package` - Makes a package from the specified (and formerly built) Ruby version.
+
+Attributes
+----------
+
+  * `node['ruby_pkg']['ruby_version']` - The Ruby version to build. Defaults to "1.9.3-p429".
+  * `node['ruby_pkg']['iteration']` - The iteration/revision number of the package. Defaults to 1.
+  * `node['ruby_pkg']['base_dir']` - The base directory where the Ruby versions will be installed. Defaults to "/usr/local/ruby".
+  * `node['ruby_pkg']['pkg_dir']` - The directory where the package will be built. Defaults to "/tmp".
+  * `node['ruby_pkg']['maintainer']` - The optional maintainer field. Defaults to nil.
 
 License and Author
 ------------------
