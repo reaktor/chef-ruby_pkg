@@ -1,4 +1,4 @@
-# 0.2.1 / _Not released yet_
+# 0.3.0 / 2013-05-27
 
 - Support Enterprise Linux based distributions, especially CentOS ([GH-4])
 - Add `base_dir` attribute instead of using `node['ruby_build']['default_ruby_base_path']`
