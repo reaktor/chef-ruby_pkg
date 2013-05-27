@@ -39,7 +39,7 @@ class Chef
       def self.default_package_dependencies(node)
         case node['platform_family']
         when 'debian'
-          deps = %w[libc6 libncurses5 libreadline6 zlib1g]
+          deps = %w[libncurses5 libreadline6 zlib1g]
           deps << (pre_wheezy?(node) ? 'libssl0.9.8' : 'libssl1.0.0')
           deps
         end

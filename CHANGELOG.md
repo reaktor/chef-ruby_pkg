@@ -1,6 +1,7 @@
 # 0.2.1 / _Not released yet_
 
 - Fix skipping of "package" recipe on unknown platform
+- Remove deb dependency on libc6 as it is a required package
 
 # 0.2.0 / 2013-05-26
 
