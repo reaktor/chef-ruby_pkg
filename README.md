@@ -24,7 +24,7 @@ A Chef cookbook with [knife-solo](http://matschaffer.github.io/knife-solo/) and 
 Requirements
 ------------
 
-Should work on all Debian based Linux distributions. Support for some other platforms (that ruby_build and [fpm](https://github.com/jordansissel/fpm) support) is planned. Please open an [issue](https://github.com/reaktor/chef-ruby_pkg/issues) or pull request if interested.
+Should work on Debian and Enterprise Linux based distributions. Other platforms (that ruby_build and [fpm](https://github.com/jordansissel/fpm) support) should be possible to add. Please open an [issue](https://github.com/reaktor/chef-ruby_pkg/issues) or pull request if interested.
 
 Requires [ruby_build](http://community.opscode.com/cookbooks/ruby_build) and [fpm-tng](http://community.opscode.com/cookbooks/fpm-tng) community cookbooks.
 

@@ -30,6 +30,7 @@ class Chef
       def self.default_package_type(node)
         case node['platform_family']
         when 'debian' then 'deb'
+        when 'rhel' then 'rpm'
         else
           Chef::Log.warn 'Unsupported platform for ruby_pkg'
           nil
@@ -42,6 +43,8 @@ class Chef
           deps = %w[libncurses5 libreadline6 zlib1g]
           deps << (pre_wheezy?(node) ? 'libssl0.9.8' : 'libssl1.0.0')
           deps
+        when 'rhel'
+          %w[libffi openssl readline zlib]
         end
       end
 
