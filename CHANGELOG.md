@@ -1,5 +1,6 @@
 # 0.2.1 / _Not released yet_
 
+- Support Enterprise Linux based distributions, especially CentOS ([GH-4])
 - Add `base_dir` attribute instead of using `node['ruby_build']['default_ruby_base_path']`
 - Fix skipping of "package" recipe on unknown platform
 - Remove deb dependency on libc6 as it is a required package
@@ -24,3 +25,4 @@
 [GH-1]:  https://github.com/reaktor/chef-ruby_pkg/issues/1  "Issue 1"
 [GH-2]:  https://github.com/reaktor/chef-ruby_pkg/issues/2  "Issue 2"
 [GH-3]:  https://github.com/reaktor/chef-ruby_pkg/issues/3  "Issue 3"
+[GH-4]:  https://github.com/reaktor/chef-ruby_pkg/issues/4  "Issue 4"
