@@ -27,15 +27,6 @@ class Chef
         full_version[/[^-]*/]
       end
 
-      def self.default_fpm_dependencies(node)
-        case node['platform_family']
-        when 'debian'
-          deps = %w[ruby ruby-dev]
-          deps << 'rubygems' if pre_wheezy?(node) || pre_quantal?(node)
-          deps
-        end
-      end
-
       def self.default_package_type(node)
         case node['platform_family']
         when 'debian' then 'deb'
@@ -56,10 +47,6 @@ class Chef
 
       def self.pre_wheezy?(node)
         node['platform'] == 'debian' && node['platform_version'].to_i < 7
-      end
-
-      def self.pre_quantal?(node)
-        node['platform'] == 'ubuntu' && node['platform_version'].to_f < 12.10
       end
     end
   end
