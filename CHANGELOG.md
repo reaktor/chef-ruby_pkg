@@ -1,4 +1,4 @@
-# 0.3.1 / _Not released yet_
+# 0.3.2 / 2013-05-28
 
 - Fix Fedora support
 - Update the list of supported platforms in metadata.rb
