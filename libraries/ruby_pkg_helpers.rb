@@ -29,8 +29,8 @@ class Chef
 
       def self.default_package_type(node)
         case node['platform_family']
-        when 'debian' then 'deb'
-        when 'rhel' then 'rpm'
+        when 'debian'         then 'deb'
+        when 'fedora', 'rhel' then 'rpm'
         else
           Chef::Log.warn 'Unsupported platform for ruby_pkg'
           nil
