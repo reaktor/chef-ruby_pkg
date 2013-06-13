@@ -2,7 +2,7 @@ ruby_pkg
 ========
 
 [![Build Status](https://travis-ci.org/reaktor/chef-ruby_pkg.png?branch=master)](https://travis-ci.org/reaktor/chef-ruby_pkg)
-[![Dependency Status](https://gemnasium.com/reaktor/chef-ruby_pkg.png)](https://gemnasium.com/reaktor/chef-ruby_pkg)
+[![Dependency Status](https://gemnasium.com/tmatilai/chef-ruby_pkg.png)](https://gemnasium.com/reaktor/chef-ruby_pkg)
 
 Table of Contents
 -----------------
