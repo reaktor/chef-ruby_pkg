@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'chef', ENV.fetch('CHEF_VERSION', '~> 11.0')
 
 group :knife_solo do
-  gem 'berkshelf', '~> 1.4'
+  gem 'berkshelf', '~> 2.0'
   gem 'knife-solo', '~> 0.3.0.pre4'
 end
 
