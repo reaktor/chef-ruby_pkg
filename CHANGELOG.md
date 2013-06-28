@@ -1,4 +1,4 @@
-# 0.3.3 / _Not released yet_
+# 0.4.0 / 2013-06-28
 
 - Upgrade Berkshelf to v2.x for knife-solo
 - Update default Ruby version to 1.9.3-p448
