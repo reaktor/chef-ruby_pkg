@@ -66,7 +66,7 @@ To use knife-solo or Vagrant you need to use the full [source repository](https:
 
 3. Fetch the package from the server. For example:
 
-        $ scp <user@host>:/tmp/debian-7.0_ruby-1.9.3-p429-1_amd64.deb pkg/
+        $ scp <user@host>:/tmp/debian-7.0_ruby-1.9.3-p448-1_amd64.deb pkg/
 
 ### Vagrant
 
@@ -86,7 +86,7 @@ To use knife-solo or Vagrant you need to use the full [source repository](https:
 
 Spin up the box to build and package a specified Ruby version:
 
-    $ VERSION="1.9.3-p429" BOX="ubuntu-12.04" vagrant up
+    $ VERSION="2.0.0-p247" BOX="ubuntu-12.04" vagrant up
 
 The package will be created to _pkg_ directory.
 
@@ -95,7 +95,7 @@ The package will be created to _pkg_ directory.
   * `$BOX` - The Vagrant box name. Defaults to "squeeze-6.0".
   * `$DEBUG` - If set, enable debug logging of the Chef run.
   * `$VERSION` - The Ruby version to package. Passed to ruby_build. Defaults
-    to "1.9.3-p429"
+    to "1.9.3-p448"
   * `$ITERATION` - The package iteration version number. Passed to fpm.
     Defaults to 1.
   * `$MAINTAINER` - The (optional) package maintainer. Passed to fpm.
@@ -110,7 +110,7 @@ Recipes
 Attributes
 ----------
 
-  * `node['ruby_pkg']['ruby_version']` - The Ruby version to build. Defaults to "1.9.3-p429".
+  * `node['ruby_pkg']['ruby_version']` - The Ruby version to build. Defaults to "1.9.3-p448".
   * `node['ruby_pkg']['iteration']` - The iteration/revision number of the package. Defaults to 1.
   * `node['ruby_pkg']['base_dir']` - The base directory where the Ruby versions will be installed. Defaults to "/usr/local/ruby".
   * `node['ruby_pkg']['pkg_dir']` - The directory where the package will be built. Defaults to "/tmp".

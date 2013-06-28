@@ -19,7 +19,7 @@
 # limitations under the License.
 #
 
-default['ruby_pkg']['ruby_version']     = '1.9.3-p429'
+default['ruby_pkg']['ruby_version']     = '1.9.3-p448'
 default['ruby_pkg']['iteration']        = 1
 
 default['ruby_pkg']['base_dir']         = '/usr/local/ruby'
