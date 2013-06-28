@@ -4,6 +4,10 @@ def debianoid?
   BOX =~ /debian|ubuntu/
 end
 
+# See the README.md for plugin installation instructions
+Vagrant.require_plugin 'vagrant-berkshelf'
+Vagrant.require_plugin 'vagrant-omnibus'
+
 Vagrant.configure('2') do |config|
   config.vm.box = BOX
   config.vm.hostname = 'ruby-pkg'
@@ -16,9 +20,6 @@ Vagrant.configure('2') do |config|
     v.vmx['memsize'] = 2048
   end
 
-  # Configure Vagrant plugins.
-  # See the README.md for installation instructions.
-  config.berkshelf.enabled = true
   config.omnibus.chef_version = :latest
 
   config.vm.provision :chef_solo do |chef|
