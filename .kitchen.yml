@@ -38,4 +38,3 @@ suites:
 - name: default
   run_list:
   - recipe[ruby_pkg]
-  attributes: { ruby_pkg: { ruby_version: '1.9.3-p429' } }
