@@ -13,8 +13,8 @@
     # install the package
     if [ -f /tmp/*_ruby-1.9.3-*.deb ]; then
         dpkg -i /tmp/*_ruby-1.9.3-*.deb
-    elif [ -f /tmp/*_ruby-1.9.3-*.rpm ]; then
-        rpm -i /tmp/*_ruby-1.9.3-*.rpm
+    elif [ -f /tmp/*_ruby-1.9.3_*.rpm ]; then
+        rpm -i /tmp/*_ruby-1.9.3_*.rpm
     else
         false
     fi
