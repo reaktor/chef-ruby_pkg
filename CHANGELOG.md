@@ -1,3 +1,6 @@
+# 0.4.1 / _Not released yet_
+
+
 # 0.4.0 / 2013-06-28
 
 - Upgrade Berkshelf to v2.x for knife-solo
