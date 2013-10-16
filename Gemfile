@@ -8,13 +8,13 @@ group :knife_solo do
 end
 
 group :development, :test do
-  gem 'foodcritic', '~> 2.0'
+  gem 'foodcritic', '~> 3.0'
   gem 'rake'
   gem 'tailor', '~> 1.2'
 end
 
 group :development do
-  gem 'guard-foodcritic', '>= 1.0.1'
+  gem 'guard-foodcritic', '>= 1.0.2'
   gem 'kitchen-vagrant', '>= 0.10.0'
   gem 'test-kitchen', '>= 1.0.0.alpha.7'
 end
