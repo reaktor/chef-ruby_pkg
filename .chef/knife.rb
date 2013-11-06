@@ -10,6 +10,7 @@ cookbook_path nil
 role_path     nil
 data_bag_path nil
 encrypted_data_bag_secret nil
+environment_path nil
 
 # ~/.berkshelf/knife-solo/*/
 knife[:berkshelf_path] = nil
