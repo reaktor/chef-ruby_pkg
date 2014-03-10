@@ -121,6 +121,6 @@ License and Author
 
 Author:: Teemu Matilainen <<teemu.matilainen@reaktor.fi>>
 
-Copyright © 2013, [Reaktor Innovations Oy](http://reaktor.fi/en)
+Copyright © 2013-2014, [Reaktor Innovations Oy](http://reaktor.fi/en)
 
 Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE).
