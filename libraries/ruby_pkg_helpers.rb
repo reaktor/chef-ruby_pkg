@@ -4,7 +4,7 @@
 #
 # Author:: Teemu Matilainen <teemu.matilainen@reaktor.fi>
 #
-# Copyright 2013, Reaktor Innovations Oy
+# Copyright 2013-2014, Reaktor Innovations Oy
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ class Chef
       def self.default_package_dependencies(node)
         case node['platform_family']
         when 'debian'
-          deps = %w[libncurses5 libreadline6 zlib1g]
+          deps = %w[libncurses5 libreadline6 libyaml-0-2 zlib1g]
           deps << (pre_wheezy?(node) ? 'libssl0.9.8' : 'libssl1.0.0')
           deps
         when 'rhel'

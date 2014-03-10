@@ -1,5 +1,6 @@
 # 0.4.1 / _Not released yet_
 
+- Depend on libyaml-0-2 on Debianoids
 
 # 0.4.0 / 2013-06-28
 
