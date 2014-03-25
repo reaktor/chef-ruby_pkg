@@ -1,4 +1,4 @@
-BOX = ENV.fetch('BOX', 'debian-6.0')
+BOX = ENV.fetch('BOX', 'debian-7')
 
 def debianoid?
   BOX =~ /debian|ubuntu/

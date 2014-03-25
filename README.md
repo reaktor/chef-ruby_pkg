@@ -92,10 +92,10 @@ The package will be created to _pkg_ directory.
 
 #### Environment variables for Vagrant
 
-  * `$BOX` - The Vagrant box name. Defaults to "squeeze-6.0".
+  * `$BOX` - The Vagrant box name. Defaults to "debian-7".
   * `$DEBUG` - If set, enable debug logging of the Chef run.
   * `$VERSION` - The Ruby version to package. Passed to ruby_build. Defaults
-    to "1.9.3-p448"
+    to "2.0.0-p451"
   * `$ITERATION` - The package iteration version number. Passed to fpm.
     Defaults to 1.
   * `$MAINTAINER` - The (optional) package maintainer. Passed to fpm.
