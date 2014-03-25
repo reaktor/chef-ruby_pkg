@@ -13,11 +13,11 @@ Vagrant.configure('2') do |config|
   config.vm.hostname = 'ruby-pkg'
 
   config.vm.provider :virtualbox do |v|
-    v.customize ['modifyvm', :id, '--memory', 2048]
+    v.memory = 2048
   end
 
   config.vm.provider :vmware_fusion do |v|
-    v.vmx['memsize'] = 2048
+    v.memory = 2048
   end
 
   config.omnibus.chef_version = :latest
