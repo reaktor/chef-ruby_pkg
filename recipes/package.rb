@@ -42,6 +42,7 @@ include_recipe 'fpm-tng'
 # Synlink e.g. /usr/local/ruby/1.9.3 -> 1.9.3-p429
 link File.join(ruby_base_dir, ruby_version_main) do
   to ruby_version_full
+  ignore_failure true
 end
 
 ruby_package_path = File.join(
