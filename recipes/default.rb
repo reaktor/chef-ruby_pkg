@@ -19,5 +19,7 @@
 # limitations under the License.
 #
 
+package "make"
+
 include_recipe 'ruby_pkg::build'
 include_recipe 'ruby_pkg::package'
